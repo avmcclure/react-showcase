@@ -1,0 +1,41 @@
+{
+    "presets": [
+        ["react"],
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": ["last 2 versions"],
+                    "node": "8.9.3"
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "lodash",
+        [
+            "module-resolver",
+            {
+                "root": ["./src/App"],
+                "alias": {
+                    "test": "./test",
+                    "Src": "./src",
+                    "Components": "./src/components"
+                }
+            }
+        ],
+        "transform-regenerator",
+        "transform-async-functions",
+        "transform-class-properties",
+        "add-module-exports",
+        "transform-runtime"
+    ],
+    "env": {
+        "test": {
+            "plugins": ["istanbul"]
+        },
+        "production": {
+            "plugins": ["transform-react-remove-prop-types"]
+        }
+    }
+}

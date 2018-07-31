@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import PhotoCard from 'Components/PhotoCard';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <PhotoCard
+                    url={'http://placehold.it/600/92c952'}
+                    title={'accusamus beatae ad facilis cum similique qui sunt'}
+                    id={1}
+                    albumId={1}
+                />
+            </div>
+        );
+    }
 }
 
 export default App;
